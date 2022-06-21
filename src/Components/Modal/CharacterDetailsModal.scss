@@ -1,0 +1,38 @@
+.character-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+grid-gap: 20px;
+background-color: #0A222D !important;
+border-radius: 10px;
+border: unset !important;
+
+.fields-container{
+display: flex;
+flex-direction: column;
+grid-gap: 44px;
+width: 100%;
+
+    .modal-input {
+    
+        .MuiOutlinedInput-root{
+            background-color: white;
+            height: 44px;
+        }
+        .MuiInputLabel-root{
+            margin: -10px 0 0 -10px;
+            font-size: 14px;
+           
+        }
+    }
+}
+
+.card-img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 26px;
+}
+
+}

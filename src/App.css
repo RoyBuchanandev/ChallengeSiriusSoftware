@@ -1,0 +1,103 @@
+#root{
+  height: 100vh;
+  
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+.col-3 {
+  width: 100%;
+  
+}
+
+.card-img {
+  width: 100px;
+}
+
+card-body {
+  overflow-y: scroll;
+}
+
+.inner-list {
+  width: 80%;
+  height: 100%;
+}
+
+.text-episode {
+ overflow-y: scroll;
+ height: 100px;
+ width: 500px;
+}
+
+.card-body-episode {
+  width: 290px;
+}
+
+.card-modal {
+  background-color: red
+}
+
+.modal-btn {
+ width: 100px;
+
+}
+
+.inner-list {
+  z-index: 90;
+  background:rgba(196, 196, 196, 0.5);
+  width: 1000px;
+  color: white;
+  border-radius: 8px;
+  
+}
+
+.col {
+  position: absolute;
+width: 1250px;
+height: 43px;
+
+background: rgba(10, 34, 45, 0.7);
+border-radius: 8px;
+}
+
