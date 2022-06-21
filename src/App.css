@@ -1,6 +1,5 @@
-#root{
+#root {
   height: 100vh;
-  
 }
 
 .App {
@@ -43,61 +42,63 @@
   }
 }
 
-
-
-
-.col-3 {
-  width: 100%;
-  
+.MuiTable-root {
+  background: #c4c4c4;
+  min-width: 750px;
 }
 
-.card-img {
-  width: 100px;
+.MuiInputLabel-root {
+  color: aqua !important;
 }
 
-card-body {
-  overflow-y: scroll;
+#standard-basic {
+  color: aqua !important;
 }
 
-.inner-list {
-  width: 80%;
-  height: 100%;
+.MuiToolbar-root {
+  color: white !important;
+  display: flex;
+  align-items: flex-start;
+  align-self: flex-start;
 }
 
-.text-episode {
- overflow-y: scroll;
- height: 100px;
- width: 500px;
+.MuiTableCell-head {
+  color: black !important;
+  background-color: #c4c4c4 !important;
 }
 
-.card-body-episode {
-  width: 290px;
+.MuiInput-input {
+  color: white !important;
 }
 
-.card-modal {
-  background-color: red
+::before {
+  border-bottom: 1px solid aqua !important;
+  width: 300px;
 }
 
-.modal-btn {
- width: 100px;
-
+::after {
+  border: 0.5px solid aqua !important;
+  width: 300px;
 }
 
-.inner-list {
-  z-index: 90;
-  background:rgba(196, 196, 196, 0.5);
-  width: 1000px;
+.MuiTableCell-root {
+  color: black !important;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: #0a222d !important;
+  height: 1px;
+}
+
+.MuiTableRow-root {
+  color: aqua;
+}
+
+.sort-label {
   color: white;
-  border-radius: 8px;
-  
 }
-
-.col {
-  position: absolute;
-width: 1250px;
-height: 43px;
-
-background: rgba(10, 34, 45, 0.7);
-border-radius: 8px;
-}
-

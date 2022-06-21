@@ -1,7 +1,7 @@
 import React from 'react'
 import "./CustomInput.scss" 
 import TextField from '@mui/material/TextField'
-import OutlinedInput from '@mui/material/OutlinedInput'
+
 
 const CustomInput = ({label,value,onChange,disabled}) => {
   return (

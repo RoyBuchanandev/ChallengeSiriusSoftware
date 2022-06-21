@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "@mui/material";
 import axios from "axios";
 import Swal from "sweetalert2";
 import CharacterDetailsModal from "../Modal/CharacterDetailsModal";
@@ -20,25 +19,22 @@ import Box from "@mui/material/Box";
 function Listado() {
   const [handleApi, setHandleApi] = useState({ info: null, results: [] });
   const [search, setSearch] = useState("");
-  const [show, setShow] = useState(true);
-  const [modal, setModal] = useState(false);
   const [pageNumber, setPageNumber] = useState(0);
   const [open, setOpen] = useState(false);
   const [selectedCharacter, setSelectedCharacter] = useState(null);
-  const [sortingSpecies,setSortingSpecies] = useState ([])
-  const [order, setOrder] = React.useState('asc');
+  const [order, setOrder] = useState("asc");
 
   const getSortedList = (list) => {
     return list.sort(function (a, b) {
       if (a.species < b.species) {
-        return order === 'asc' ? 1 : -1;
+        return order === "asc" ? 1 : -1;
       }
       if (a.species > b.species) {
-        return order === 'asc' ? -1 : 1;
+        return order === "asc" ? -1 : 1;
       }
       return 0;
-    })
-  }
+    });
+  };
 
   const handleOpen = (value) => {
     setOpen(true);
@@ -65,21 +61,20 @@ function Listado() {
       });
   }, [search, pageNumber]);
 
-
   return (
     <div className="wrapper">
       <CharacterDetailsModal
         open={open}
         handleClose={handleClose}
         value={selectedCharacter}
-      />  
+      />
 
       <div className="characters-list-header">
         <p className="text-title">Rick and Morty Characters</p>
         <div className="search">
           <TextField
             id="standard-basic"
-            label="Search by character"
+            label=" Search by character"
             variant="standard"
             onChange={(e) => setSearch(e.target.value)}
             value={search}
@@ -97,35 +92,28 @@ function Listado() {
           >
             <TableHead>
               <TableRow>
-                <TableCell align="right">id</TableCell>
-                <TableCell align="right">name</TableCell>
-                <TableCell align="right">status</TableCell>
+                <TableCell align="right">Id</TableCell>
+                <TableCell align="right">Name</TableCell>
+                <TableCell align="right">Status</TableCell>
                 <TableCell align="right">
-                <TableSortLabel
-              active
-              direction={order}
-              onClick={()=>{
-                setOrder(order === 'asc' ? 'desc' : 'asc')
-              }}
-            >
-              specie
-            
-                <Box component="span">
-                  {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
-                </Box>
-            
-            </TableSortLabel>
-                  </TableCell>
+                  <TableSortLabel
+                    className="sort-label"
+                    active
+                    direction={order}
+                    onClick={() => {
+                      setOrder(order === "asc" ? "desc" : "asc");
+                    }}
+                  >
+                    Specie
+                    <Box component="span">{order === "desc" ? "" : ""}</Box>
+                  </TableSortLabel>
+                </TableCell>
                 <TableCell align="right">Info</TableCell>
-                <TableCell align="right">Episodes</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {getSortedList(handleApi.results).map((row) => (
-                <TableRow
-                  key={row.id}
-                  /* sx={{ '&:last-child td, &:last-child th': { border: 0 } }} */
-                >
+                <TableRow key={row.id}>
                   <TableCell component="th" scope="row">
                     {row.id}
                   </TableCell>

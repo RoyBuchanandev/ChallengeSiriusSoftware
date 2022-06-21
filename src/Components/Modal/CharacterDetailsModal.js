@@ -19,27 +19,27 @@ const CharacterDetailsModal = ({ open, value, handleClose }) => {
     p: 4,
   };
   return (
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style} className="character-card">
-          <CardMedia
-            className="card-img"
-            component="img"
-            height="194"
-            image={value?.image}
-            alt="Paella dish"
-          />
-<div className="fields-container"> 
+    <Modal
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
+      <Box sx={style} className="character-card">
+        <CardMedia
+          className="card-img"
+          component="img"
+          height="194"
+          image={value?.image}
+          alt="Paella dish"
+        />
+        <div className="fields-container">
           <TextField
             className="modal-input"
             disabled
             fullWidth
-            value={value?.id}
-            label={"Id"}
+            value={value?.gender}
+            label={"Gender"}
             InputLabelProps={{
               style: { color: "#fff" },
               shrink: true,
@@ -100,10 +100,12 @@ const CharacterDetailsModal = ({ open, value, handleClose }) => {
               shrink: true,
             }}
           />
-          </div>
-          <Button className="close" variant="outlined" onClick={handleClose}>Cerrar</Button>
-        </Box>
-      </Modal>
+        </div>
+        <Button className="close" variant="outlined" onClick={handleClose}>
+          Cerrar
+        </Button>
+      </Box>
+    </Modal>
   );
 };
 
